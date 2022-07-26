@@ -13,9 +13,15 @@ public class SpringProjectApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringProjectApplication.class, args);
 	}
-	
-@RequestMapping("/")
+	@RestController@RequestMapping("/")
+	public class HomeController{
+@RequestMapping("")
 	public String hello() {
-		return "Hello, cruel world!";
-}
+		return "Hello, CRUEL WORLD!!";
+	}
+@RequestMapping("/world")
+public String world() {
+        return "Class level annotations are NIFTY too!";
+		}
+	}
 }
